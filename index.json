@@ -1,0 +1,44 @@
+{
+  "connections": [
+    {
+      "port": 4001,
+      "routes": {
+        "cors": {
+          "credentials": true
+        }
+      },
+      "router": {
+        "isCaseSensitive": false,
+        "stripTrailingSlash": true
+      },
+      "labels": ["api", "rest", "controller", "zwave"]
+    }
+  ],
+  "plugins": {
+    "good": {
+      "reporters": [
+        {
+          "reporter": "good-console",
+          "events": {
+            "response": "*",
+            "ops": "*",
+            "error": "*",
+            "log": "*"
+          }
+        }
+      ]
+    },
+    "rosie_controller_zwave": {
+      "config": {
+        "logging": false,
+        "consoleoutput": true,
+        "saveconfig": true,
+        "driverattempts": 3,
+        "pollinterval": 500,
+        "suppressrefresh": true
+      },
+      "USB_ADDRESS": "/dev/aeon_z_stick"
+    },
+    "./index": {}
+  }
+}

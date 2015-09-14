@@ -1,0 +1,35 @@
+{
+  "name": "rosie_controller_lighting",
+  "version": "0.1.0",
+  "description": "Adds /lighting endpoints to the Rosie Controller.",
+  "author": "Scott Olson",
+  "license": "MIT",
+  "keywords": [
+    "home",
+    "automation",
+    "rosie",
+    "lighting"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Olson3R/rosie_controller_lighting"
+  },
+  "bugs": {
+    "url": "https://github.com/Olson3R/rosie_controller_lighting/issues"
+  },
+  "homepage": "https://github.com/Olson3R/rosie_controller_lighting",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/rejoice/bin/rejoice -c index.json -p ./"
+  },
+  "dependencies": {
+    "good": "^6.3.0",
+    "good-console": "^5.0.3",
+    "hapi": "^8.2.0",
+    "openzwave": "0.0.32",
+    "rejoice": "^2.0.1",
+    "rosie_controller_zwave": "^0.2.0",
+    "underscore": "^1.8.3"
+  }
+}
